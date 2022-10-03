@@ -1,0 +1,298 @@
+<ng-container>    
+
+    <div id="tm-bg"></div>
+    <div id="tm-wrap">
+        <div class="tm-main-content">
+            <div class="container tm-site-header-container">
+                <div class="row" style="    background: #31302e4d;">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-md-col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col">
+                        <div class="tm-site-header">
+                            <img src="assets/img/underline.png" class="img-fluid mb-4">
+                            <p style="color:white ;">Todos used daily for small numbers of ToDos.I hope you enjoy this app. </p>  
+<p>                                 
+</p>                        </div>                        
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="content">
+                            <div class="grid">
+                                <div class="grid__item" id="home-link">
+                                    <div class="product">
+                                        <!---->
+                                        <div class="tm-nav-link" data-toggle="modal" data-target="#exampleModalCenter">
+                                            <i class="fas fa-plus fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text" >add Todo</span>
+                                            <div class="product__bg"></div>             
+                                        </div>                                                              
+                                       
+                                    </div>
+                                </div>
+
+                                <div class="grid__item" id="team-link">
+                                    <div class="product">
+                                        <div class="tm-nav-link" data-toggle="modal" data-target="#exampleModalCenter1" (click)="tt()">
+                                            <i class="fas fa-list fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">My Todos</span>
+                                            <div class="product__bg" ></div>            
+                                        </div>                                     
+                                  
+                                    </div>
+                                </div>
+
+                                <div class="grid__item">
+                                    <div class="product">
+                                        <div class="tm-nav-link">
+                                            <i class="fas fa-info fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">Contact</span>
+                                            <div class="product__bg"></div>             
+                                        </div>                                                                 
+                                       
+                                    </div>
+                                </div>
+
+                                <div class="grid__item" >
+                                    <div class="product"  >
+                                        <div class="tm-nav-link">
+                                            <i class="fas fa-comments fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text" >About us</span>
+                                            <div class="product__bg"></div>        
+                                        </div>                                    
+                                        
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>                       
+                    </div>
+                </div>                
+            </div>
+            <footer>
+                <p style="background-color:rgba(198, 232, 238, 0.382) ;" class="small tm-copyright-text">Created by aziz lassoued &copy; <span class="tm-current-year">2023</span> 
+                
+                Todos: <a rel="nofollow" href="" class="tm-text-highlight"></a></p>
+            </footer>
+        </div> <!-- .tm-main-content class="modal-header" -->  
+    </div></ng-container>
+ 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="    background: #000000c2;">
+          <div class="modal-header" >
+            <button  type="button" class="close d-flex align-items-center justify-content-center" data-dismiss="modal" aria-label="Close">
+              <span style="color: white !important;"  aria-hidden="" class="ion-ios-close"></span>
+            </button>
+          </div>
+          <div class="row">
+             
+                <div class="col-md-1 divider"></div>
+                <div class="col-md">
+                  <div class="modal-body p-0">
+                      <h3 class="mb-4">New todo                                                   <i style="color: yellow;" class='fa fa-calendar yellow-color'></i>
+
+                      </h3>
+                      <form action="#" class="signup-form" #f="ngForm" (ngSubmit)="add(f)">
+                          <div class="form-group">
+                              <!-- <input type="text" name="content" updatetodo class="form-control" placeholder="content" required #content="ngModel"
+                              ngModel> -->
+                              <div class="col-md-12 py-4">
+                                <label for="birthday"></label>
+                                <input class="" style="background-color:transparent ; color: aliceblue;" type="date" id="birthday" name="date" required #date="ngModel" ngModel />
+                              </div>                          </div>
+                          <div class="form-group">
+                            <textarea style="background-color: #202d3b;" type="content"  name="content" class="form-control" rows="9" placeholder="type .." required #content="ngModel"
+                            ngModel> </textarea>
+                          </div>
+                          
+                          
+                    <div class="form-group">
+                        <button style="background: #ffff2d;color: #202d3b;" type="submit" class="form-control  rounded submit px-3">Create</button>
+                    </div>
+                    <div class="form-group">
+                                  
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <!-- modalliste -->
+    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content" style="    background: #000000c2;">
+            <div class="modal-header">
+              <button type="button" class="close d-flex align-items-center justify-content-center" data-dismiss="modal" aria-label="Close">
+                <span style="color: white !important;" aria-hidden="true" class="ion-ios-close"></span>
+              </button>
+            </div>
+            <div class="row">
+                <div class="col-md mb-md-0 mb-5">
+                    <div class="modal-body p-0" style="    overflow: scroll;
+                    height: 410px;">
+                        <h3 class="mb-4">My todos</h3>
+                        <form action="#" class="signin-form"  >
+                          
+                  
+                      <div class="form-group d-md-flex" style="    border: transparent;
+                      border-color: #68686875;
+                      border-style: inset; "  *ngFor="let item of dataArray; index as i">
+                          <div class="form-check w-50" >
+                              <label class="custom-control fill-checkbox">
+                                              <input type="checkbox" class="fill-control-input">
+                                              <span class="fill-control-indicator"></span>
+                                              <span class="fill-control-description">date : {{item.date | date:'yyyy-MM-dd'}}</span>
+                                          </label>
+                                          <label class="custom-control fill-checkbox">
+                                            <input type="checkbox" class="fill-control-input">
+                                            <span class="fill-control-description">{{item.content}}</span>
+                                        </label>
+                             </div>
+<!-- <div >
+    <button style="color: #cfb70d;background: transparent; border:none "  class="fas fa-edit fa-2x px-2 " data-toggle="modal" data-target="#exampleModalCenter2"  (click)="getTodoById(item._id,i)"   > </button> 
+    <button  style="color:#ff445e ;     margin-left: 252px;background: transparent; border:none" class="fas fa-trash fa-2x" (click)="delete(item._id,i)"> </button> 
+  
+</div>     -->
+<div class="social d-flex text-center">
+    <a style="    width: 100%;
+    display: block;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #767d40;
+    background-color: rgb(0, 0, 0);
+    "  class="px-2 py-3 mr-md-1 rounded" data-toggle="modal" data-target="#exampleModalCenter2"  (click)="getTodoById(item._id,i)"><span class="fas fa-edit mr-2"></span> Update</a>
+    <a style="    width: 100%;
+    display: block;
+    cursor: pointer;
+background-color: black;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #ff0000;
+    "  class="px-2 py-3 ml-md-1 rounded" (click)="delete(item._id,i)"><span class="fas fa-trash  mr-2"></span> Delete</a>
+</div>                                    
+                                         
+                                        <div class="modal" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                              <div class="modal-content" style="    background: #000000c2;">
+                                                <div class="modal-header">
+                                                  <button type="button" class="close d-flex align-items-center justify-content-center" data-dismiss="modal" aria-label="Close">
+                                                    <span style="color: white !important;" aria-hidden="true" class="ion-ios-close"></span>
+                                                  </button>
+                                                </div>
+                                                <div class="row">
+                                                    <!-- <div class="col-md mb-md-0 mb-5">
+                                                        <div class="modal-body p-0">
+                                                            <h3 class="mb-4">Sign In</h3>
+                                                            <form action="#" class="signin-form">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" placeholder="Username">
+                                                                </div>
+                                                          <div class="form-group">
+                                                            <input type="password" class="form-control" placeholder="Password">
+                                                          </div>
+                                                          <div class="form-group">
+                                                              <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+                                                          </div>
+                                                          <div class="form-group d-md-flex">
+                                                              <div class="form-check w-50">
+                                                                  <label class="custom-control fill-checkbox">
+                                                                                  <input type="checkbox" class="fill-control-input">
+                                                                                  <span class="fill-control-indicator"></span>
+                                                                                  <span class="fill-control-description">Remember Me</span>
+                                                                              </label>
+                                                                          </div>
+                                                                          <div class="w-50 text-md-right">
+                                                                              <a href="#" style="color: #fff">Forgot Password</a>
+                                                                          </div>
+                                                          </div>
+                                                        </form>
+                                                        <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+                                                        <div class="social d-flex text-center">
+                                                            <a href="#" class="px-2 py-3 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
+                                                            <a href="#" class="px-2 py-3 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
+                                                        </div>
+                                                        </div>
+                                                      </div> -->
+                                                      <div class="col-md-1 divider"></div>
+                                                      <div class="col-md">
+                                                        <div class="modal-body p-0">
+                                                            <h3 class="mb-4">update                                            
+                                                                <i class="fas fa-plus fa-1x tm-nav-icon"></i>
+                                                            </h3>
+                                                            <form class="signup-form" #form="ngForm" (ngSubmit)="editTodt(form)" >
+                                                                <div class="form-group">
+                                                                    <!-- <input type="text" name="content" class="form-control" placeholder="content" required #content="ngModel"
+                                                                    ngModel> -->
+                                                                    <div class="col-md-12 py-4">
+                                                                      <label for="birthday"></label>
+                                                                      <input  [ngModel]="todos.date | date:'yyyy-MM-dd' "   style="background-color:transparent ; color: aliceblue;" type="date" id="birthday" name="date" required  />
+                                                                    </div>                          </div>
+                                                                <div class="form-group">
+                                                                  <textarea type="content"  name="content" class="form-control" rows="9" placeholder="type .." 
+                                                                  [ngModel]="todos.content" required> </textarea>
+                                                                </div>
+                                                                
+                                                                
+                                                          <div class="form-group">
+                                                              <button type="submit" class="form-control btn btn-primary rounded submit px-3">change</button>
+                                                                                                                      </div>
+                                                                              </form>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                              </div>
+                                            </div>
+                                          </div>       
+                   </div>
+                    </form>
+                  
+                    </div>
+                  </div>
+                  
+                </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      

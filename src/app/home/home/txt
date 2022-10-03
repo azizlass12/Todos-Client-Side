@@ -1,0 +1,4 @@
+if we gonna change  the position of image or the appearing of this img 
+should use this commande not with media quirie code 
+/////    object-fit:cover; //type of dessepearing img   // here the  image was dessepeare ( space between ) 
+or ////// object-fit:contain ;   but here this image he desseapeare slowly without  any code media querie 
