@@ -24,12 +24,21 @@ export class HomeComponent implements OnInit {
   idd: any;
   idtodos: any;
   idt: any;
-
-  constructor(public route:ActivatedRoute, private ds:DataService,private router:Router) {
+i:any
+  dataArray1: any;
+  constructor(public route:ActivatedRoute, private ds:DataService,public router:Router) {
    
     this.route.params.subscribe(params =>this._id=params.id)    // id stock dan var id
+this.ds.listen().subscribe((m:any)=>{
+      console.log(m)
+      this.getTodoById(this.id,this.i)
 
-    console.log(this._id)
+
+
+
+
+      
+})
 
 // 
  }
@@ -37,13 +46,17 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 tt(){
+  if(this.dataArray==''){ 
+    this.dataArray1="      :   there is no todos right now !!"
+   }else{
   this.ds.getalltodos().subscribe((Response:any)=>{
     this.dataArray=Response.listTodos// put data from function getallcommands in variable dataarray
     this.router.navigate(['todos/lister']);
-
+  
  console.log(this.dataArray)
-     }
-     )
+     } 
+     
+     )}
 }
 add(f:any){
   this.router.navigate(['todos/ajouter']);
@@ -62,8 +75,11 @@ swal.fire({
   text:' todo ajouter avec succes',
   icon:'success',
   confirmButtonText:'ok'
+  
 })
 f.reset()
+this.router.navigate(['todos']);
+
     }, (err: HttpErrorResponse) => {
       // this.toast.error({detail:"L'opération a échoué",position:"tr",summary:"Veuillez remplir tous les champs",duration:5000})
 
@@ -82,6 +98,8 @@ f.reset()
         })
         
       });
+      this.router.navigate(['todos/ajouter']);
+
     }
     // gettodo(id:any,i:number){
     //   this.ds.getById(id).subscribe((response: any) => {
@@ -101,13 +119,14 @@ f.reset()
         res=>{
 
 console.log(this.idtodos)
-swal.fire({
-  title:'success!',
-  text:' todo updated avec succes',
-  icon:'success',
-  confirmButtonText:'ok'
+// swal.fire({
+//   title:'success!',
+//   text:' todo updated avec succes',
+//   icon:'success',
+//   confirmButtonText:'ok'
 
-})
+// })
+
 this.router.navigate(['todos/lister']);
 
 

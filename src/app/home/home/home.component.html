@@ -12,16 +12,21 @@
 <p>                                 
 </p>                        </div>                        
                     </div>
+                    <!-- background -->
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <div class="content">
                             <div class="grid">
                                 <div class="grid__item" id="home-link">
                                     <div class="product">
                                         <!---->
-                                        <div class="tm-nav-link" data-toggle="modal" data-target="#exampleModalCenter">
-                                            <i class="fas fa-plus fa-3x tm-nav-icon"></i>
+                                        <div class="tm-nav-link" data-toggle="modal" data-target="#exampleModalCenter" style="    background: #000000a3 !important;
+                                        border: 1px solid white;
+                                        
+                                        ;">
+                                            <i  class="fas fa-plus fa-3x tm-nav-icon"></i>
                                             <span class="tm-nav-text" >add Todo</span>
-                                            <div class="product__bg"></div>             
+                                            <div class="product__bg"></div>    
+                                                  
                                         </div>                                                              
                                        
                                     </div>
@@ -29,7 +34,7 @@
 
                                 <div class="grid__item" id="team-link">
                                     <div class="product">
-                                        <div class="tm-nav-link" data-toggle="modal" data-target="#exampleModalCenter1" (click)="tt()">
+                                        <div class="tm-nav-link" data-toggle="modal" data-target="#exampleModalCenter1"  (click)="tt()">
                                             <i class="fas fa-list fa-3x tm-nav-icon"></i>
                                             <span class="tm-nav-text">My Todos</span>
                                             <div class="product__bg" ></div>            
@@ -112,7 +117,7 @@
             </button>
           </div>
           <div class="row">
-             
+             openSnackBar
                 <div class="col-md-1 divider"></div>
                 <div class="col-md">
                   <div class="modal-body p-0">
@@ -134,7 +139,7 @@
                           
                           
                     <div class="form-group">
-                        <button style="background: #ffff2d;color: #202d3b;" type="submit" class="form-control  rounded submit px-3">Create</button>
+                        <button style="background: #ffff2d;color: #202d3b;" type="submit" class="form-control  rounded submit px-3" >Create</button>
                     </div>
                     <div class="form-group">
                                   
@@ -159,13 +164,13 @@
                 <div class="col-md mb-md-0 mb-5">
                     <div class="modal-body p-0" style="    overflow: scroll;
                     height: 410px;">
-                        <h3 class="mb-4">My todos</h3>
+                        <h3 class="mb-4">My todos {{dataArray1}}</h3>
                         <form action="#" class="signin-form"  >
                           
                   
                       <div class="form-group d-md-flex" style="    border: transparent;
                       border-color: #68686875;
-                      border-style: inset; "  *ngFor="let item of dataArray; index as i">
+                      border-style: inset; "  *ngFor="let item of dataArray ; index as i">
                           <div class="form-check w-50" >
                               <label class="custom-control fill-checkbox">
                                               <input type="checkbox" class="fill-control-input">
@@ -174,21 +179,21 @@
                                           </label>
                                           <label class="custom-control fill-checkbox">
                                             <input type="checkbox" class="fill-control-input">
-                                            <span class="fill-control-description">{{item.content}}</span>
+                                            <span class="fill-control-description">{{item.content}} </span>
                                         </label>
                              </div>
 <!-- <div >
     <button style="color: #cfb70d;background: transparent; border:none "  class="fas fa-edit fa-2x px-2 " data-toggle="modal" data-target="#exampleModalCenter2"  (click)="getTodoById(item._id,i)"   > </button> 
     <button  style="color:#ff445e ;     margin-left: 252px;background: transparent; border:none" class="fas fa-trash fa-2x" (click)="delete(item._id,i)"> </button> 
   
-</div>     -->
+</div> -->
 <div class="social d-flex text-center">
     <a style="    width: 100%;
     display: block;
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.4);
     color: #767d40;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0); 
     "  class="px-2 py-3 mr-md-1 rounded" data-toggle="modal" data-target="#exampleModalCenter2"  (click)="getTodoById(item._id,i)"><span class="fas fa-edit mr-2"></span> Update</a>
     <a style="    width: 100%;
     display: block;
@@ -286,13 +291,3 @@ background-color: black;
 
 
 
-
-
-
-
-
-
-
-
-
-      
